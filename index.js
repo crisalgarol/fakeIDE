@@ -1,5 +1,5 @@
 const fs = require("fs");
-const socket = require('socket.io-client')('http://192.168.0.24:3000');
+const socket = require('socket.io-client')('http://192.168.0.9:3000');
 
 function init (){
    
@@ -18,7 +18,7 @@ function setUpWebSocketConnection(){
       "x":0,
       "y":0,
       "z":0,
-      "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+      "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/earth/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});"
     },
       
       {
@@ -26,7 +26,7 @@ function setUpWebSocketConnection(){
         "x":0,
         "y":1,
         "z":1,
-        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/2.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});"
       },
 
             
