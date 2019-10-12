@@ -19,7 +19,7 @@ function setUpWebSocketConnection(){
                       "x":0,
                       "y":0,
                       "z":0,
-                      "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                    "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                     },
                       
                       {
@@ -27,7 +27,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":0,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/2.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                       },
 
                             
@@ -36,7 +36,7 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":0,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -44,7 +44,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":0,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -52,7 +52,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":0,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/5.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -60,7 +60,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":0,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -68,7 +68,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":0,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -76,14 +76,14 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":0,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/5.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {"name":"fig9",
                       "x":2,
                       "y":0,
                       "z":2,
-                      "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                     },
                 
                         //Segundo nivel horizontal
@@ -93,7 +93,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":1,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -101,7 +101,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":1,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -109,7 +109,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":1,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/5.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -117,7 +117,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":1,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -125,7 +125,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":1,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -133,7 +133,7 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":1,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -141,7 +141,7 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":1,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
 
@@ -150,7 +150,7 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":1,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/5.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      //Tercer nivel horizontal
@@ -167,7 +167,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":2,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/2.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                       },
 
                             
@@ -176,7 +176,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":2,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -184,7 +184,7 @@ function setUpWebSocketConnection(){
                         "x":0,
                         "y":2,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -192,7 +192,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":2,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/5.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },
 
                      {
@@ -200,7 +200,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":3,
                         "z":1,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/3.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {
@@ -208,7 +208,7 @@ function setUpWebSocketConnection(){
                         "x":1,
                         "y":2,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/4.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                      },/**/
 
                      {
@@ -216,14 +216,14 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":2,
                         "z":0,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/5.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                      },
 
                      {"name":"fig26",
                       "x":2,
                       "y":2,
                       "z":1,
-                      "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code" : "const gltfLoader=new THREE.GLTFLoader;gltfLoader.load(\"models/dinosaur/scene.gltf\",e=>{const t=e.scene;scene.add(t),arrayObjects.push(t);const r=(new THREE.Box3).setFromObject(t),o=r.getSize(new THREE.Vector3).length(),n=r.getCenter(new THREE.Vector3);frameArea(.8*o,o,n,camera),controls.maxDistance=10*o,controls.target.copy(n),controls.update(),counter=0,requestAnimationFrame(render)});const box=(new THREE.Box3).setFromObject(root),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update(),counter=0,requestAnimationFrame(render);"
                     },
                       
                      {
@@ -231,7 +231,7 @@ function setUpWebSocketConnection(){
                         "x":2,
                         "y":2,
                         "z":2,
-                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/2.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
+                        "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
                       }
 
                       ]
