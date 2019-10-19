@@ -159,8 +159,8 @@ function setUpWebSocketConnection(){
                       "x":0,
                       "y":2,
                       "z":0,
-                      "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube);"
-                    },
+                      "code":"var geometry=new THREE.BoxGeometry(.5,.5,.5),material=new THREE.MeshBasicMaterial({map:(new THREE.TextureLoader).load(\"imagenes/1.png\"),side:THREE.DoubleSide,color:16777215,transparent:!0,opacity:1}),cube=new THREE.Mesh(geometry,material);cube.position.z=-1,scene.add(cube),arrayObjects.push(cube),requestAnimationFrame(render);const box=(new THREE.Box3).setFromObject(cube),boxSize=box.getSize(new THREE.Vector3).length(),boxCenter=box.getCenter(new THREE.Vector3);frameArea(.8*boxSize,boxSize,boxCenter,camera),controls.maxDistance=10*boxSize,controls.target.copy(boxCenter),controls.update();requestAnimationFrame(render);"
+                     },
                       
                       {
                         "name":"fig19",
